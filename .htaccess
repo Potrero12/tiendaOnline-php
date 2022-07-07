@@ -1,0 +1,15 @@
+<ifModule mod_rewrite.c>
+    
+    # activar el rewrite
+    RewriteEngine on
+    ErrorDocument 404 http://localhost/master-php/Tienda-Online/error/index
+
+    # comprobar que las url no las saque  si es un directorio
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    # comprobar que las url no las saque  si es un fichero
+    RewriteCond %{SCRIPT_FILENAME} !-f
+
+    RewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2
+
+</ifModule>
+
