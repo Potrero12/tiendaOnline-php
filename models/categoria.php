@@ -42,6 +42,15 @@
 
         }
 
+        public function getOne(){
+
+            $sql = "SELECT * FROM categorias WHERE id = {$this->getId()}";
+            $categoria = $this->db->query($sql);
+
+            return $categoria->fetch_object();
+
+        }
+
         public function save(){
             $sql = "INSERT INTO categorias VALUES (NULL, '{$this->getNombre()}')";
             $save = $this->db->query($sql);
