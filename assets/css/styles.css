@@ -373,7 +373,7 @@ button{
 /*CARRITO*/
 .delete-carrito{
    width: 295px;
-   float: left; 
+   float: left;
 }
 
 .button-delete{
@@ -389,7 +389,7 @@ button{
 }
 
 .total-carrito{
-   width: 295px;
+   width: 310px;
    float: right; 
 }
 
